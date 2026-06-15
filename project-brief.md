@@ -72,7 +72,7 @@ classDiagram
     style MyObject fill:#FFE0B2,stroke:#E65100,color:#E65100
 ```
 
-Rename `MyObject` to match the object you choose, then build out the manager and the menu.
+Rename `MyObject` to match the object you choose, then build out the manager and the menu. You may use AI to assist with coding but you must be able to explain your code in the manditory screencast video in your submission.  
 
 ## 2. Minimum Project Requirements
 
