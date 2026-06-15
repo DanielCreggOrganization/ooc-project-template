@@ -1,12 +1,22 @@
 # Object Oriented Computing - Project Assessment
 
-> Build a **console** Java application that manages a collection of custom objects in a **plain array** and demonstrates the **four pillars of OOP**: Encapsulation, Inheritance, Polymorphism and Abstraction.
+## ⭐ Start Here: Create Your Repository
 
-## ⭐ Start Here
+> ⚠️ Create your own copy from this template — **do _not_ Fork** (a fork would be public and tied to this repo).
 
-1. **Create your repository.** On Moodle, under the **Project Assessment** section, click the **GitHub Classroom** link. This creates your own copy of this template under the module's GitHub organisation. *(Work only inside this repository - see [Important Notes](#7-important-notes).)*
-2. **Open it in GitHub Codespaces.** On your new repository, click **`< > Code` → Codespaces → Create codespace on `main`**. You get a ready-to-go, browser-based VS Code with **Java 21** already installed - nothing to set up on your own machine.
-3. **Press run.** Open `src/ie/atu/testpackage/Main.java` and run it. The console menu works from day one; your job is to complete the `TODO`s.
+Click the button to open the "create a new repository from this template" page:
+
+[![Use this template](https://img.shields.io/badge/Use%20this%20template-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DanielCreggOrganization/ooc-project-template/generate)
+
+Then, on the page that opens:
+
+1. **Sign in** to GitHub if you are not already.
+2. Set **Owner** to your own account and give the repository a **name** (for example, `aooc-project`).
+3. Set the visibility to **Public** so teaching staff can open your link. *(If you choose Private, you must add your lecturer as a collaborator.)*
+4. Click **Create repository**.
+5. Open your new repository in **GitHub Codespaces**: the green **Code** button → **Codespaces** → **Create codespace on `main`**.
+
+Once your repository is set up, read the rest of this brief for the full requirements and how your work is graded.
 
 > 💡 This is a **console (text-based) application**. There is no graphical or desktop UI to build - all interaction happens in the terminal.
 
