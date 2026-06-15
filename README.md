@@ -1,93 +1,58 @@
-# OOC Project - <Your Application Title>
+# Object Oriented Computing Project
 
-> A **console**, array-based Java application that manages custom objects and demonstrates the **four pillars of OOP**.
+**Title:** Items Application Manager  
+**Name:** Sean Murphy  
+**Student ID:** G00123456  
+**Screencast Link:** [https://youtu.be/AbCdEf12345](https://youtu.be/AbCdEf12345)
 
-**Title:** Items Application Manager
-**Name:** Patrick Murphy
-**Student ID:** G00123456
-
-> ℹ️ The title, name and ID above are **placeholders** - replace them with your own details.
-
-## Open in Codespaces
-
-This project is built to run in **GitHub Codespaces** (Java 21 is pre-installed - nothing to install locally).
-
-1. On your repository, click **`< > Code` → Codespaces → Create codespace on `main`**.
-2. When VS Code opens, open `src/ie/atu/testpackage/Main.java`.
-3. Press **Run** (or use the terminal commands in [Running the Application](#running-the-application)).
-
-The menu runs from day one; you then complete the `TODO`s in the source files.
+> 💻 **Open this project in GitHub Codespaces:** on the repository page, click the green **Code** button, choose the **Codespaces** tab, then **Create codespace on `main`**. A ready-to-code cloud environment (with Java) that builds automatically from the `.devcontainer` folder — no local install needed.
 
 ## Application Function
 
-Describe what your application does. What kind of object does it manage, and what can the user do with it from the menu (add, remove, update, find total, search)?
+> **Scope:** what your app does for the *user* — its features and how someone uses it. (Keep code structure for *Application Architecture*.)
 
-## The Four Pillars of OOP
-
-Explain briefly where each pillar appears in **your** code:
-
-- **Encapsulation** - e.g. the fields of `MyObject` are `private` and accessed only through getters/setters.
-- **Inheritance** - e.g. a subclass that extends your object.
-- **Polymorphism** - e.g. overriding `toString()` (and/or methods in a subclass).
-- **Abstraction** - e.g. `MyObjectManager` hides the array details behind simple methods.
+Discuss, in detail, what the application does. Add a screenshot of the application **in use** (note: this is a *different* image to the architecture screenshot further down). 
 
 ## Running the Application
 
-This is a **console** application. From the repository root:
+Provide step by step instructions on how to run your application. Are there any software installs required? 
 
-```bash
-# 1. Compile all classes into a 'bin' folder
-javac -d bin src/ie/atu/testpackage/*.java
+For example:
 
-# 2. Run the program
-java -cp bin ie.atu.testpackage.Main
-```
+1. Open the repository in **GitHub Codespaces**.
+2. Open the `Main` class.
+3. Click the **Run** icon in the top-right corner.
+4. *(add any further steps, and note any software that must be installed)*
 
-Then use the on-screen menu:
+## Project Requirements
 
-```
-1. Add Item
-2. Remove Item
-3. Update Item
-4. Find Total Items
-5. Search Items
-6. Quit
-```
+All requirements live in **one place** — the [**project brief**](project-brief.md). 
 
-*(In Codespaces you can also just open `Main.java` and click **Run**.)*
+See: 
+1. Minimum Project Requirements 
+2. Minimum Feature Requirements
+3. Coding Standards
 
-## Minimum Project Requirements
-
-Describe how you have met all minimum project requirements:
-
-- The repository contains, at minimum, two commits per week (in practice, many commits per day while coding).
-- The project - code and documentation - is fully contained in this GitHub Classroom repository.
-- A custom object with **4 instance variables of 4 different types**.
-- The **4 pillars of OOP** are used.
-- Menu features: **Add**, **Remove**, **Update**, **Find Total**, **Search** and **Quit**, backed by a **plain array**.
-- The code **compiles** (Java 21).
-- The code is formatted in a consistent, standard way.
-- The code is commented - at minimum one Javadoc comment per class and method.
-- The documentation and comments are free of spelling and grammar mistakes.
+Make sure you have met every one and documented everything here before you submit.
 
 ## Project Requirements Above and Beyond
 
-Discuss any features or design elements that show you went beyond the basic requirements (extra methods, a chosen array size, an animated GIF, a runnable `.jar`, and so on).
+Discuss any application features or design elements that show you went above and beyond the basic requirements.
 
 ## Application Architecture
 
-Describe how the application is structured. List your classes and their purpose, and the key methods of each. As a starting point this template ships with:
+> **Scope:** the *code* — your classes, their methods, and the data structure(s) (e.g. the `ArrayList`) used to store your objects. (Keep user-facing features for *Application Function* and UI design for *JavaFX*.)
 
-- **`Main`** - the console menu (entry point and user interaction).
-- **`MyObjectManager`** - the array-based store (`add`, `remove`, `update`, `getTotal`, `search`).
-- **`MyObject`** - the custom object you manage (rename it to suit your project).
+Discuss in detail how the application is structured. List all classes. List their methods and what they do. Discuss what structures are used to store data objects.
+
+Add a screenshot or diagram of the application architecture, e.g. a class diagram (a *different* image to the in-use screenshot above).
 
 ## Roadblocks and Unfinished Functionality
 
-What did you not finish? Discuss the issues you faced, possible solutions, and what you would do differently next time.
+Discuss the issues you faced with creating your application. Provide possible solutions to these issues. What would you have done differently if you had to do this again? What did you not get finished?
 
 ## Resources
 
-Provide links to resources you used, for example:
+Provide links to resources used:
 
-- [Tutorialspoint - Java](https://www.tutorialspoint.com/java/) - a Java tutorials site I found helpful.
+* [Tutorialspoint](https://www.tutorialspoint.com/java/) - Java Tutorials site I found helpful
