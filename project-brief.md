@@ -157,7 +157,7 @@ Email daniel.cregg@atu.ie to let me know when you have submitted.
 
 ```text
 Screencast (unlisted YouTube): https://youtu.be/your-video-id
-GitHub repository:             https://github.com/DanielCreggOrganization/your-repo-name
+GitHub repository:             https://github.com/SeanMurphy/ooc-project
 ```
 
 ## 7. Important Notes
