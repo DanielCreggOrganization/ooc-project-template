@@ -1,13 +1,14 @@
 {
 	"name": "Java",
-	"image": "mcr.microsoft.com/devcontainers/java:latest",
+	"image": "mcr.microsoft.com/devcontainers/java:21",
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"redhat.java",
 				"vscjava.vscode-java-debug",
 				"vscjava.vscode-java-dependency",
-				"visualstudioexptteam.vscodeintellicode"
+				"visualstudioexptteam.vscodeintellicode",
+				"bierner.markdown-mermaid"
 			]
 		}
 	}

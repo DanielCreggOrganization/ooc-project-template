@@ -1,61 +1,163 @@
 # Object Oriented Computing - Project Assessment
-For this project you are required to design and develop a Java application that demonstrates the 4 Pillars of OOP (i.e., Encapsulation, Inheritance, Polymorphism and Abstraction).
-The application must manage custom objects of your choice (e.g. Car, Book, Phone). You will use a simple java array to store and manage the objects.
 
-## ⚡ Minimum Project Requirements
-- You must use the Project GitHub Repository template. No other development set up will be acceptable. This link to create your repository can be found under the `Project Assessment` section on Moodle. You need to click on the link to create your repository. This repository will contain all documentation, application code and any resources (e.g., input and output files, images etc) used by your application. Please note, no materials outside of your GitHub repository are gradable. Using another GitHub repository or not using GitHub at all for this project will incur a penalty of 60%. If you do not understand what is meant by this, then email me before you begin your project.
-- This application must be developed using GitHub Codespaces.
-- Project development must be tracked on GitHub via regular commits. Your GitHub repository must have at minimum two commits per week; if not, I may contact you for a live project demonstration. The project will be capped at 40% if you fail to attend this meeting.    
-- The README file should contain clear instructions for compiling, deploying, and running the application. It should also briefly outline the nature of the project and detail the set of features it contains. All sections of the README template must be filled out; add more sections if you wish. 
+> Build a **console** Java application that manages a collection of custom objects in a **plain array** and demonstrates the **four pillars of OOP**: Encapsulation, Inheritance, Polymorphism and Abstraction.
 
-## 🛠️ Minimum Feature Requirements
-The application must incorporate, at minimum, the following features:
-- Your chosen object must have 4 instance variables of 4 different types (e.g., String, int, float, boolean).
-- Your project code must utilise the 4 Pillars of OOP (i.e., Encapsulation, Inheritance, Polymorphism and Abstraction) 
-- Methods to add, delete, count total and find objects in an array.
+## ⭐ Start Here
 
-## 📝 Coding Standards
-- Your code must compile
-- Consistent code formatting
-- Code commentary is essential. Comment every class and method at minimum. 
+1. **Create your repository.** On Moodle, under the **Project Assessment** section, click the **GitHub Classroom** link. This creates your own copy of this template under the module's GitHub organisation. *(Work only inside this repository - see [Important Notes](#7-important-notes).)*
+2. **Open it in GitHub Codespaces.** On your new repository, click **`< > Code` → Codespaces → Create codespace on `main`**. You get a ready-to-go, browser-based VS Code with **Java 21** already installed - nothing to set up on your own machine.
+3. **Press run.** Open `src/ie/atu/testpackage/Main.java` and run it. The console menu works from day one; your job is to complete the `TODO`s.
 
-## ⭐ Enhanced Features
-To achieve a higher grade, consider implementing:
-- Go above and beyond the minimum by adding extra methods (e.g., a method to list all objects by their unique ID in the array) and features (e.g., ask the user to choose the size of the array) to your application which you have researched yourself. Document any extra methods or features in your README.
-- Create an animated gif of you using your application and add it to your Readme.
-- Create an executable jar file that opens your application independently and include this in your GitHub repository. 
+> 💡 This is a **console (text-based) application**. There is no graphical or desktop UI to build - all interaction happens in the terminal.
 
-## 📊 Project Submission Process
-You **must** follow this submission process carefully. If you miss any part, especially the screencast, you will be penalised.    
+## 📋 Agenda
 
-### 1. Screencast Demonstration
-- 5-minute screen recording using [MS Stream](https://www.microsoft365.com/launch/stream)
-- Give a brief code walkthrough highlighting places where you expended most of your effort
-- Demonstrate your app running and its operation  
-- Highlight any additional functionality you implemented
-- **MAKE SURE YOUR SCREENCAST IS ACCESSIBLE BY ME**. CHECK STREAMS/OneDrive PERMISSIONS and make sure it can be seen by me.
+| # | Section |
+|---|---------|
+| ⭐ | [Start Here](#-start-here) |
+| 1 | [Introduction](#1-introduction) |
+| 2 | [Minimum Project Requirements](#2-minimum-project-requirements) |
+| 3 | [Minimum Feature Requirements](#3-minimum-feature-requirements) |
+| 4 | [Coding Standards](#4-coding-standards) |
+| 5 | [Enhanced Features](#5-enhanced-features) |
+| 6 | [Submission Process](#6-submission-process) |
+| 7 | [Important Notes](#7-important-notes) |
+| 8 | [Grading Rubric](#8-grading-rubric) |
 
-### 2. Moodle Submission
-- [Download a copy of your final Git repository from the GitHub website.](https://youtube.com/shorts/4bDLccFjQyc?si=dWUDWoW4B_tnADty)
-- In the submission area on Moodle, where you will upload your zipped project, you will see a text box in which you will be able to enter text (See sample below). Put the URL link to your project GitHub repository and the URL link to your MS Stream screencast recording you created.
-- Upload this zip file under the submission link on Moodle. You can find the submission link under the Final Project section on the Moodle page.
-- Submit the zip file to Moodle before the due date. The due date can be found by clicking on the submission link on Moodle. Late submissions will incur a 10% penalty per day. 
+## 1. Introduction
 
-  #### Sample Textbox Input
-  <pre>
-  <b>Screencast Link:</b> https://atlantictu-my.sharepoint.com/:v:/g/personal/daniel_cregg_atu_ie/Ed9h1upB77VFuIm0ezGYj8MBlOaHCoiWUJkLUFqj0Z9OJQ?e=ua2JM1
-  <b>GitHub Link:</b> https://github.com/DanielCreggOrganization/ooc2-final-project-2021-annmurphy  
-  </pre>
+For this project you will design and develop a Java application that demonstrates the **four pillars of OOP** (Encapsulation, Inheritance, Polymorphism and Abstraction). The application manages custom objects of your choice (for example `Car`, `Book` or `Phone`) and stores them in a **plain Java array**.
 
-## ⚠️ Important Notes
-1. Only materials within this GitHub repository will be graded. (40% grade cap if missed)
-2. Insufficient commits may require a live demonstration (40% grade cap if missed)
-3. Late submissions incur a 10% penalty per day
+The template already contains a working console skeleton made of three classes. The diagram below shows how they relate: `Main` (the menu) talks to a `MyObjectManager` (the array store), which holds many `MyObject` instances.
 
-## ✅ Grading Rubric
+```mermaid
+classDiagram
+    direction LR
+    class Main {
+        +main(String[] args) void
+        -showMenu() void
+        -readChoice() int
+    }
+    class MyObjectManager {
+        -MyObject[] items
+        -int count
+        +add(MyObject obj) boolean
+        +remove(int id) boolean
+        +update(int id, MyObject updated) boolean
+        +getTotal() int
+        +search(int id) MyObject
+    }
+    class MyObject {
+        -String name
+        -int id
+        -double price
+        -boolean available
+        +toString() String
+    }
+    Main ..> MyObjectManager : creates and uses
+    MyObjectManager "1" o-- "0..*" MyObject : stores in array
+
+    style Main fill:#BBDEFB,stroke:#0D47A1,color:#0D47A1
+    style MyObjectManager fill:#C8E6C9,stroke:#1B5E20,color:#1B5E20
+    style MyObject fill:#FFE0B2,stroke:#E65100,color:#E65100
+```
+
+Rename `MyObject` to match the object you choose, then build out the manager and the menu.
+
+## 2. Minimum Project Requirements
+
+- You **must** use this template repository, created from the **GitHub Classroom** link on Moodle. No other setup is acceptable. This repository must contain all documentation, application code and resources (input/output files, images, and so on). **No materials outside this repository are gradable.** Using another GitHub repository, or not using GitHub at all, will **cap your project at 40%**. If you are unsure what this means, email me before you begin.
+- Develop your project in **GitHub Codespaces**.
+- Track your work with **regular commits** - at minimum **two commits per week** (in practice you should commit many times a day while coding). A sparse commit history may require you to attend a live demonstration; if you fail to attend, the project is **capped at 40%**.
+- Complete **every section** of the `README.md`, and add more sections if you wish. It must clearly explain what the application does and how to compile and run it.
+
+## 3. Minimum Feature Requirements
+
+Your application must include, at minimum:
+
+- A custom object with **four instance variables of four different types** (for example `String`, `int`, `double`, `boolean`).
+- Clear use of the **four pillars of OOP** (Encapsulation, Inheritance, Polymorphism and Abstraction).
+- Methods to **add**, **remove**, **update**, **count the total of**, and **search** objects held in a **plain array**.
+- A simple **console menu** that lets the user reach every one of those features.
+
+## 4. Coding Standards
+
+- Your code **must compile** (Java 21).
+- Use **consistent formatting** throughout.
+- **Comment your code** - at minimum a Javadoc comment on every class and method.
+- Keep your documentation and comments **free of spelling and grammar mistakes**.
+
+## 5. Enhanced Features
+
+To aim for a higher grade, go beyond the minimum. For example:
+
+- Add extra methods (for example, list all objects sorted by their unique id) or features (for example, let the user choose the array size at startup). Research these yourself and document them in your `README.md`.
+- Record an animated GIF of your application in use and embed it in your `README.md`.
+- Produce a runnable `.jar` so the application can be launched on its own, and include it in the repository.
+
+## 6. Submission Process
+
+Follow this process carefully. If you miss any part - **especially the screencast** - you will lose marks.
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[Create repo via the<br/>GitHub Classroom link on Moodle]
+    B --> C[Build your app in Codespaces<br/>commit at least twice a week]
+    C --> D[Record a 5-minute screencast]
+    D --> E[Upload it as an<br/>UNLISTED YouTube video]
+    E --> F[Fill in the README<br/>and push your final code]
+    F --> G[Download the repo as a ZIP<br/>from GitHub]
+    G --> H[Submit on Moodle:<br/>ZIP + GitHub URL + YouTube URL]
+    H --> I([Done])
+
+    classDef startNode fill:#C8E6C9,stroke:#1B5E20,color:#1B5E20;
+    classDef step fill:#BBDEFB,stroke:#0D47A1,color:#0D47A1;
+    classDef media fill:#FFE0B2,stroke:#E65100,color:#E65100;
+    classDef doneNode fill:#D1C4E9,stroke:#4527A0,color:#4527A0;
+
+    class A startNode;
+    class I doneNode;
+    class B,C,F,G,H step;
+    class D,E media;
+```
+
+### 6.1 Screencast Demonstration
+
+- Record a **5-minute** screen capture in which you:
+  - give a short code walkthrough, highlighting the parts where you put in the most effort;
+  - demonstrate the application running; and
+  - point out any extra functionality you added.
+- Upload the recording to **YouTube as an _unlisted_ video**, and put the link in your Moodle submission.
+
+> **Why an unlisted YouTube video?** An unlisted video does not appear in search results or on your channel, but **anyone with the link can watch it** - no sign-in, sharing permissions or expiry dates to get wrong. This avoids the access problems we used to hit with MS Stream / OneDrive, where the recording often could not be opened. Just make sure it is set to **Unlisted** (not **Private**).
+
+### 6.2 Moodle Submission
+
+In the Moodle submission area you will find a text box and a file upload. Provide:
+
+- a **ZIP** of your final repository ([how to download a repo ZIP](https://youtube.com/shorts/4bDLccFjQyc?si=dWUDWoW4B_tnADty)),
+- the **URL of your GitHub repository**, and
+- the **URL of your unlisted YouTube screencast**.
+
+Submit before the due date shown on the Moodle submission link. **Late submissions incur a 10% penalty per day.**
+
+**Sample text-box entry**
+
+```text
+Screencast (unlisted YouTube): https://youtu.be/your-video-id
+GitHub repository:             https://github.com/DanielCreggOrganization/your-repo-name
+```
+
+## 7. Important Notes
+
+1. Only materials within this GitHub repository are graded. *(40% cap if missed.)*
+2. Insufficient commits may require a live demonstration. *(40% cap if missed.)*
+3. Late submissions incur a 10% penalty per day.
+
+## 8. Grading Rubric
 
 | Area | Poor<br>(0-39) | Fair<br>(40-49) | Good<br>(50-59) | Very Good<br>(60-69) | Excellent<br>(70-100) |
-|------|----------------|-----------------|-----------------|---------------------|---------------------|
-| **UI/UX** | • Basic template-like<br>• Minimal effort<br>• Poor navigation<br>• Inconsistent design | • Basic effort shown<br>• Meets minimums<br>• Navigation works<br>• Shows competency | • Consistent design<br>• Intuitive navigation<br>• Beyond basic requirements | • Bespoke elements<br>• Consistent design<br>• Fluid navigation<br>• Above requirements | • Professional finish<br>• Innovative design<br>• Flawless UX<br>• Cohesive elements<br>• Exceeds requirements |
-| **Technical** | • Inconsistent code<br>• Unfinished sections<br>• Poor formatting | • Basic competence<br>• No new elements<br>• Meets minimums | • Good structure<br>• Technical mastery<br>• Minor added extras | • Professional code<br>• Clean architecture<br>• Consistent style | • Excellence shown<br>• Advanced features<br>• Perfect structure |
-| **Docs** | • Basic README<br>• Few commits<br>• Poor submission | • Basic sections done<br>• Sporadic commits<br>• Meets minimums<br>• Minimal comments | • Good GitHub usage<br>• Detailed README<br>• Regular commits<br>• Clear comments | • Bespoke content<br>• Clean repo<br>• Detailed docs | • Professional docs<br>• Rich media<br>• Perfect GitHub use<br>• Research depth |
+|------|----------------|-----------------|-----------------|----------------------|-----------------------|
+| **Console UX** | • Bare template<br>• Minimal effort<br>• Confusing menu<br>• Inconsistent prompts | • Basic effort<br>• Meets minimums<br>• Menu works<br>• Shows competency | • Consistent prompts<br>• Intuitive menu<br>• Beyond basic requirements | • Polished prompts<br>• Helpful feedback<br>• Smooth navigation<br>• Above requirements | • Professional finish<br>• Robust input handling<br>• Flawless flow<br>• Exceeds requirements |
+| **Technical** | • Inconsistent code<br>• Unfinished sections<br>• Poor formatting | • Basic competence<br>• No new elements<br>• Meets minimums | • Good structure<br>• Solid use of the 4 pillars<br>• Minor extras | • Professional code<br>• Clean architecture<br>• Consistent style | • Excellence shown<br>• Advanced features<br>• Perfect structure |
+| **Docs** | • Bare README<br>• Few commits<br>• Poor submission | • Basic sections done<br>• Sporadic commits<br>• Minimal comments | • Good GitHub usage<br>• Detailed README<br>• Regular commits<br>• Clear comments | • Bespoke content<br>• Clean repo<br>• Detailed docs | • Professional docs<br>• Rich media<br>• Excellent GitHub use<br>• Research depth |
