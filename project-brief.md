@@ -156,7 +156,7 @@ Email daniel.cregg@atu.ie to let me know when you have submitted.
 **Sample text-box entry**
 
 ```text
-Screencast (unlisted YouTube): https://youtu.be/your-video-id
+Screencast (unlisted YouTube): https://youtu.be/1234567
 GitHub repository:             https://github.com/SeanMurphy/ooc-project
 ```
 
