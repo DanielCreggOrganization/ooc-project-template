@@ -76,7 +76,7 @@ Rename `MyObject` to match the object you choose, then build out the manager and
 
 ## 2. Minimum Project Requirements
 
-- You **must** use this template repository, created from the **GitHub Classroom** link on Moodle. No other setup is acceptable. This repository must contain all documentation, application code and resources (input/output files, images, and so on). **No materials outside this repository are gradable.** Using another GitHub repository, or not using GitHub at all, will **cap your project at 40%**. If you are unsure what this means, email me before you begin.
+- You **must** use this template repository to create your project repository. Your repository must contain all documentation, application code and resources (input/output files, images, and so on). **No materials outside this repository are gradable.** Using another GitHub repository, or not using GitHub at all, will **cap your project at 40%**. If you are unsure what this means, email me before you begin.
 - Develop your project in **GitHub Codespaces**.
 - Track your work with **regular commits** - at minimum **two commits per week** (in practice you should commit many times a day while coding). A sparse commit history may require you to attend a live demonstration; if you fail to attend, the project is **capped at 40%**.
 - Complete **every section** of the `README.md`, and add more sections if you wish. It must clearly explain what the application does and how to compile and run it.
@@ -92,9 +92,9 @@ Your application must include, at minimum:
 
 ## 4. Coding Standards
 
-- Your code **must compile** (Java 21).
+- Your code **must compile**). Your grade will be capped at 40% if your code does not compile.
 - Use **consistent formatting** throughout.
-- **Comment your code** - at minimum a Javadoc comment on every class and method.
+- **Comment your code** - at minimum a comment on every class and method.
 - Keep your documentation and comments **free of spelling and grammar mistakes**.
 
 ## 5. Enhanced Features
@@ -150,6 +150,8 @@ In the Moodle submission area you will find a text box and a file upload. Provid
 - the **URL of your unlisted YouTube screencast**.
 
 Submit before the due date shown on the Moodle submission link. **Late submissions incur a 10% penalty per day.**
+
+Email daniel.cregg@atu.ie to let me know when you have submitted. 
 
 **Sample text-box entry**
 
