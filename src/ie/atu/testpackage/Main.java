@@ -4,6 +4,6 @@ package ie.atu.testpackage;
 public class Main {
 	// This is the main method.
 	public static void main(String[] args) {
-		System.out.println("This is the main method. I am inside the Main calss.");
+		System.out.println("This is the main method. I am inside the Main class.");
 	} // End main method
 } // End Main Class
